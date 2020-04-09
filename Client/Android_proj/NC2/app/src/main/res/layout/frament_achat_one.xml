@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_achat_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_title"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/id_lv_chat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"></ListView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/id_ly_bottom_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_view"
+        android:clickable="true"
+        android:gravity="bottom|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_tv_typing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_25"
+            android:text="@string/chat"
+            android:background="@color/gg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/layout_40" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="bottom|center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/id_edt_message"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|top"
+                android:layout_weight="1"
+                android:gravity="left|top"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/gui"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

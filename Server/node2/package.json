@@ -1,0 +1,11 @@
+{
+	"name": "ZMK",
+	"version": "0.0.1",
+	"private": "true",
+	"dependencies": {
+		"express": "*",
+		"socket.io": "*",
+		"socketio-file-upload": "*",
+		"uuid": "^7.0.3"
+	}
+}

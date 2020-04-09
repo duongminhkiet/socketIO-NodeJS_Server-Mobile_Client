@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NC</string>
+    <string name="processing">Đang xử lý...</string>
+    <string name="title_activity_alogin">ALogin</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="chat">Chát</string>
+    <string name="gui">Gửi</string>
+    <string name="username_khonghople">Tên đăng nhập không hợp lệ</string>
+    <string name="password_khonghople">Mật khẩu không hợp lệ</string>
+    <string name="danhsach">Danh sách</string>
+
+
+    <string name="connect">Connected</string>
+    <string name="disconnect">Disconnected, Please check your internet connection</string>
+    <string name="error_connect">Failed to connect</string>
+    <string name="xinchao">Xin chào</string>
+    <string name="room_name">Nhập tên phòng chát</string>
+    <string name="friend_name">Nhập tên bạn để mời</string>
+    <string name="room_name_not_empty">Tên phòng chát không thể trống</string>
+    <string name="room_name_existing">Tên này đã tồn tại, hãy chọn tên khác.</string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- for topbar two button -->
+    <dimen name="title_size">@dimen/textSize40</dimen>
+    <dimen name="subtitle_size">@dimen/textSize35</dimen>
+    <dimen name="top_bar_two_button">@dimen/layout_150</dimen>
+    <dimen name="left_btn_height">@dimen/layout_80</dimen>
+    <dimen name="left_btn_width">@dimen/layout_80</dimen>
+    <dimen name="right_btn_height">@dimen/layout_80</dimen>
+    <dimen name="right_btn_width">@dimen/layout_80</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
