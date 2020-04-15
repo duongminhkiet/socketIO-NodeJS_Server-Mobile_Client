@@ -22,21 +22,41 @@ var arrayUserLogined = [];
 
 io.on("connection", function (client) {
     console.log("new connection going on");
-    client.on("c-2-s-login", function(name){
-        if(arrayUser.indexOf(name) > -1){
+    // client.on("c-2-s-login", function(name){
+    //     if(arrayUser.indexOf(name) > -1){
 
+    //         people[client.id] = {"name" : name, "room" : []};//name;
+    //         socketsX[name] = client;
+    //         client.emit('s-2-c-login-get-contacts-list',{contactsList:arrayUser});
+    //         if(!(arrayUserLogined.indexOf(name) > -1)){
+    //             arrayUserLogined.push(name);
+    //         }
+    //         client.emit("s-2-c-update-status-user-joined", {userNameLoginedList:arrayUserLogined});
+    //         io.sockets.emit("s-2-c-update-status-user-joined-newLogin", {userName:name});
+    //         console.log(arrayUserLogined);
+    //     }else{
+    //         client.emit('s-2-c-login-username-not-existing-in-contacts-list',{message:"Tên này không có trong database."});
+    //     }
+
+    // });
+
+    client.on("c-2-s-login", function(name){
+        // if(arrayUser.indexOf(name) > -1){
+            arrayUser.push(name);
             people[client.id] = {"name" : name, "room" : []};//name;
             socketsX[name] = client;
             client.emit('s-2-c-login-get-contacts-list',{contactsList:arrayUser});
             if(!(arrayUserLogined.indexOf(name) > -1)){
                 arrayUserLogined.push(name);
             }
-            client.emit("s-2-c-update-status-user-joined", {userNameLoginedList:arrayUserLogined});
             io.sockets.emit("s-2-c-update-status-user-joined-newLogin", {userName:name});
+            client.emit("s-2-c-update-status-user-joined", {userNameLoginedList:arrayUserLogined});
+            
             console.log(arrayUserLogined);
-        }else{
-            client.emit('s-2-c-login-username-not-existing-in-contacts-list',{message:"Tên này không có trong database."});
-        }
+        // }
+        // else{
+        //     client.emit('s-2-c-login-username-not-existing-in-contacts-list',{message:"Tên này không có trong database."});
+        // }
 
     });
 

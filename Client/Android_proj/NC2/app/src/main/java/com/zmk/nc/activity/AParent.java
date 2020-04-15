@@ -362,6 +362,7 @@ public abstract class AParent extends FragmentActivity implements OnClickListene
                     Log.d(TAG, data.toString());
                     try {
                         String userNameX = data.getString("userName");
+//                        CommonHelper.showWarning(AParent.this,"userName: "+userNameX+" + myname: "+userName);
                         if(CommonHelper.checkValidString(userNameX) && CommonHelper.checkValidString(userName)){
                             if(userName.equalsIgnoreCase(userNameX)){
                                 //khong them vao danh sach
@@ -369,6 +370,12 @@ public abstract class AParent extends FragmentActivity implements OnClickListene
                                 int index = GlobalVariable.mArrayPersonName.indexOf(userNameX);
                                 if( index != -1){
                                     GlobalVariable.mArrayPerson.get(index).setStatus(1);
+                                }else{
+                                    PersonObj p = new PersonObj();
+                                    p.setStatus(1);
+                                    p.setUsername(userNameX);
+                                    GlobalVariable.mArrayPersonName.add(userNameX);
+                                    GlobalVariable.mArrayPerson.add(p);
                                 }
                             }
                         }
@@ -396,6 +403,7 @@ public abstract class AParent extends FragmentActivity implements OnClickListene
                     Log.d(TAG, data.toString());
                     try {
                         JSONArray jsonArray = data.getJSONArray("userNameLoginedList");
+//                        CommonHelper.showWarning(AParent.this,"userNameLoginedList: "+jsonArray.toString());
                         for(int i = 0 ; i < jsonArray.length(); i++){
                             String userNameX = jsonArray.get(i).toString();
                             if(CommonHelper.checkValidString(userNameX) && CommonHelper.checkValidString(userName)){
@@ -405,6 +413,12 @@ public abstract class AParent extends FragmentActivity implements OnClickListene
                                     int index = GlobalVariable.mArrayPersonName.indexOf(userNameX);
                                     if( index != -1){
                                         GlobalVariable.mArrayPerson.get(index).setStatus(1);
+                                    }else{
+                                        PersonObj p = new PersonObj();
+                                        p.setStatus(1);
+                                        p.setUsername(userNameX);
+                                        GlobalVariable.mArrayPersonName.add(userNameX);
+                                        GlobalVariable.mArrayPerson.add(p);
                                     }
                                 }
                             }
