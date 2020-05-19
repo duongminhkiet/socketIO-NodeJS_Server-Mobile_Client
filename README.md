@@ -2,10 +2,10 @@
 
 # This is a DEMO System
 # Server: NodeJS (socketIO, Expressjs)
-# Mobile: Android
+# Client: Mobile: AndroidNative + Flutter 
 
 
-# 1. Run Android
+# 1. Run Android And Flutter on Android studio
 	Change link server in Android code
 <img src="/docs/android_url_server.png" alt="RUN"/>
 <br/>
